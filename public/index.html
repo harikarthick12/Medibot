@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediBot AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <div class="chat-container">
+    <header>
+      <h1>🤖 MediBot</h1>
+      <button id="clearChat">🧹 Clear</button>
+    </header>
+
+    <div class="chat-box" id="chatBox">
+      <div class="bot-msg">Hello! I’m <b>MediBot</b>. Describe your symptoms and I’ll help you 🩺</div>
+    </div>
+
+    <div class="input-area">
+      <input id="userInput" type="text" placeholder="Type your symptoms..." autocomplete="off" />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <script src="bg.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
