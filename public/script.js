@@ -82,6 +82,10 @@ userInput.addEventListener("focus", () => {
     }, 300); // waits for keyboard animation
 });
 
+userInput.addEventListener("focus", () => {
+    particlesJS.pause(); // if using particles.js
+});
+
 userInput.addEventListener("blur", () => {
-    chatBox.scrollTop = chatBox.scrollHeight; // keep last message visible
+    particlesJS.play();
 });
