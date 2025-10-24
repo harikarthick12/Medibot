@@ -79,5 +79,9 @@ function extractSection(text, label) {
 userInput.addEventListener("focus", () => {
     setTimeout(() => {
         userInput.scrollIntoView({ behavior: "smooth", block: "center" });
-    }, 300);
+    }, 300); // waits for keyboard animation
+});
+
+userInput.addEventListener("blur", () => {
+    chatBox.scrollTop = chatBox.scrollHeight; // keep last message visible
 });

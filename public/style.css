@@ -56,14 +56,15 @@ header button:hover { background:#69c9ff; color:#000; }
 .bot-msg { background:rgba(255,255,255,0.1); color:#e0e0e0; align-self:flex-start; }
 
 .input-area {
-  flex-shrink: 0;
+  position: fixed;      /* keeps it always visible */
+  bottom: 0;            /* stick to bottom */
+  left: 0;
+  width: 100%;
   display: flex;
   gap: 10px;
   padding: 10px 15px;
-  background: rgba(0,0,0,0.5);
-  position: sticky; /* keeps it at bottom */
-  bottom: 0;
-  z-index: 5;
+  background: rgba(0,0,0,0.6);
+  z-index: 10;
 }
 
 .input-area input {
@@ -78,8 +79,11 @@ header button:hover { background:#69c9ff; color:#000; }
 }
 .input-area button:hover { opacity:0.85; }
 
-.chat-box::-webkit-scrollbar { width:6px; }
-.chat-box::-webkit-scrollbar-thumb { background:#69c9ff; border-radius:3px; }
+.chat-box {
+  padding-bottom: 70px; /* give space for input box */
+  overflow-y: auto;
+  flex: 1 1 auto;
+}
 
 @keyframes fadeIn { from{opacity:0; transform:translateY(5px);} to{opacity:1; transform:translateY(0);} }
 
