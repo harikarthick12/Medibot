@@ -75,3 +75,9 @@ function extractSection(text, label) {
     if (nextEmojiIndex === -1) return remainingText.trim();
     return remainingText.slice(0, nextEmojiIndex).trim();
 }
+
+userInput.addEventListener("focus", () => {
+    setTimeout(() => {
+        userInput.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 300);
+});
